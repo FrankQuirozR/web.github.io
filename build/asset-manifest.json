@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/WebAirQuality.github.io/static/css/main.d86dff45.css",
+    "main.js": "/WebAirQuality.github.io/static/js/main.b0b51701.js",
+    "static/js/453.66e644ee.chunk.js": "/WebAirQuality.github.io/static/js/453.66e644ee.chunk.js",
+    "static/media/PM.gif": "/WebAirQuality.github.io/static/media/PM.a6f56847b5e75de02cbd.gif",
+    "static/media/mapa.gif": "/WebAirQuality.github.io/static/media/mapa.3543aa45fd80795de5b9.gif",
+    "static/media/humedad.gif": "/WebAirQuality.github.io/static/media/humedad.ca5aad96eb602e9fdb46.gif",
+    "static/media/MUYINSALUBRE.gif": "/WebAirQuality.github.io/static/media/MUYINSALUBRE.101a3d9049164d949b8c.gif",
+    "static/media/BUENO.gif": "/WebAirQuality.github.io/static/media/BUENO.4e61379c8e2b04591007.gif",
+    "static/media/TEMPERATURA.gif": "/WebAirQuality.github.io/static/media/TEMPERATURA.e08ef9a9a1309be90604.gif",
+    "static/media/MODERADO.gif": "/WebAirQuality.github.io/static/media/MODERADO.bdd1f23c1774bb480db7.gif",
+    "static/media/INSALUBRE.gif": "/WebAirQuality.github.io/static/media/INSALUBRE.c65036a2c4d02fe66888.gif",
+    "static/media/INSALUBREGS.gif": "/WebAirQuality.github.io/static/media/INSALUBREGS.409460c77cf99ef0d97c.gif",
+    "index.html": "/WebAirQuality.github.io/index.html",
+    "main.d86dff45.css.map": "/WebAirQuality.github.io/static/css/main.d86dff45.css.map",
+    "main.b0b51701.js.map": "/WebAirQuality.github.io/static/js/main.b0b51701.js.map",
+    "453.66e644ee.chunk.js.map": "/WebAirQuality.github.io/static/js/453.66e644ee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d86dff45.css",
+    "static/js/main.b0b51701.js"
+  ]
+}
