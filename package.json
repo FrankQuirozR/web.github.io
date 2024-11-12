@@ -1,6 +1,5 @@
 {
   "name": "geovisor",
-  "homepage": "https://FrankQuirozR.github.io/WebAirQuality.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
