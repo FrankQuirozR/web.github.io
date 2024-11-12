@@ -10,6 +10,7 @@ import pmGif from './imagenes/PM.gif';
 import temperaturaGif from './imagenes/TEMPERATURA.gif';
 import humedadGif from './imagenes/humedad.gif';
 import StationSidebar from './StationSidebar';
+import { createProxyMiddleware } from 'http-proxy-middleware';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
@@ -161,24 +162,36 @@ const App = () => {
     }
   };
 
-const fetchStations = async () => {
-setLoading(true);
-try {
-  const response = await fetch('/dwc/stations');
-  if (response.ok) {
-    const data = await response.json();
-    console.log("Stations data:", data); // Imprime los datos de estaciones en consola
-    setStations(data);
-  } else {
-
-  }
-} catch (error) {
- 
-} finally {
-  setLoading(false);
-}
-};
-
+  const fetchStations = async () => {
+    setLoading(true);
+    try {
+      // Crear el proxy en tiempo de ejecución
+      const proxy = createProxyMiddleware('/dwc/stations', {
+        target: 'http://api.canair.io:8080', // Reemplaza esta URL por la URL correcta del API
+        changeOrigin: true,
+        pathRewrite: {
+          '^/dwc/stations': '/dwc/stations'
+        }
+      });
+  
+      // Usar el proxy para hacer la solicitud
+      const response = await fetch('/dwc/stations', {
+        agent: proxy
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Stations data:", data);
+        setStations(data);
+      } else {
+        // Manejar error de respuesta
+      }
+    } catch (error) {
+      // Manejar error de solicitud
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const watchCurrentLocation = () => {
     if (navigator.geolocation) {
